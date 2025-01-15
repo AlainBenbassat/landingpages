@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/landingpage/edit</path>
+    <page_callback>CRM_Landingpages_Form_Edit</page_callback>
+    <title>Edit</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/landingpage/list</path>
+    <page_callback>CRM_Landingpages_Page_List</page_callback>
+    <title>List</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/landingpage/show</path>
+    <page_callback>CRM_Landingpages_Page_Show</page_callback>
+    <title>Show</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

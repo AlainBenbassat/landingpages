@@ -1,0 +1,23 @@
+.landing_page_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.landing_page_header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.landing_page_footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.landing_page_left {
+
+}
+
+.landing_page_right {
+
+}

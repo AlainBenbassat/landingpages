@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Landingpages</base>
+  <class>LandingPage</class>
+  <name>civicrm_landing_page</name>
+  <comment>Landing Page</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique LandingPage ID</comment>
+    <html>
+      <type>Number</type>
+    </html>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>header_text</name>
+    <type>text</type>
+    <comment>header</comment>
+  </field>
+
+  <field>
+    <name>footer_text</name>
+    <type>text</type>
+    <comment>footer</comment>
+  </field>
+
+  <field>
+    <name>left_text</name>
+    <type>text</type>
+    <comment>left</comment>
+  </field>
+
+  <field>
+    <name>right_text</name>
+    <type>text</type>
+    <comment>right</comment>
+  </field>
+</table>
