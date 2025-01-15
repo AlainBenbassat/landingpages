@@ -1,12 +1,7 @@
-# landingpages
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+# Landing Pages
 
-This is an [extension for CiviCRM](https://docs.civicrm.org/sysadmin/en/latest/customize/extensions/), licensed under [AGPL-3.0](LICENSE.txt).
+Create (landing) pages with CiviCRM.
 
-## Getting Started
-
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
-
-## Known Issues
-
-(* FIXME *)
+ - civicrm/landingpage/edit?reset=1
+ - civicrm/landingpage/show?reset=1
+ - civicrm/landingpage/list?reset=1
