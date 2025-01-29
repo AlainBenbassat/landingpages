@@ -10,10 +10,11 @@ class CRM_Landingpages_BAO_LandingPage extends CRM_Landingpages_DAO_LandingPage 
       ->first();
   }
 
-  public static function saveDefault($header, $footer, $left, $right) {
+  public static function saveDefault($header, $title, $footer, $left, $right) {
     $defaultLadingPage = self::getDefault();
     if ($defaultLadingPage) {
       \Civi\Api4\LandingPage::update(FALSE)
+        ->addValue('title', $title)
         ->addValue('header_text', $header)
         ->addValue('footer_text', $footer)
         ->addValue('left_text', $left)
@@ -23,6 +24,7 @@ class CRM_Landingpages_BAO_LandingPage extends CRM_Landingpages_DAO_LandingPage 
     }
     else {
       \Civi\Api4\LandingPage::create(FALSE)
+        ->addValue('title', $title)
         ->addValue('header_text', $header)
         ->addValue('footer_text', $footer)
         ->addValue('left_text', $left)

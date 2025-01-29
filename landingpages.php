@@ -15,3 +15,12 @@ function landingpages_civicrm_install(): void {
 function landingpages_civicrm_enable(): void {
   _landingpages_civix_civicrm_enable();
 }
+
+function landingpages_civicrm_navigationMenu(&$menu) {
+  _landingpages_civix_insert_navigation_menu($menu, 'Administer/System Settings', [
+    'label' => E::ts('Landing Pages'),
+    'name' => 'landingpages',
+    'url' => 'civicrm/landingpage/list',
+    'permission' => 'administer landing pages',
+  ]);
+}

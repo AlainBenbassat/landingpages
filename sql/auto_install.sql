@@ -35,6 +35,7 @@ SET FOREIGN_KEY_CHECKS=1;
 -- *******************************************************/
 CREATE TABLE `civicrm_landing_page` (
   `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Unique LandingPage ID',
+  `title` varchar(255) COMMENT 'Title',
   `header_text` text COMMENT 'header',
   `footer_text` text COMMENT 'footer',
   `left_text` text COMMENT 'left',

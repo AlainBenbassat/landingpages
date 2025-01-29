@@ -15,7 +15,7 @@ class CRM_Landingpages_Form_Edit extends CRM_Core_Form {
 
   public function postProcess(): void {
     $values = $this->exportValues();
-    CRM_Landingpages_BAO_LandingPage::saveDefault($values['header'], $values['footer'], $values['left'], $values['right']);
+    CRM_Landingpages_BAO_LandingPage::saveDefault('Shortcuts', $values['header'], $values['footer'], $values['left'], $values['right']);
 
     CRM_Utils_System::redirect(CRM_Utils_System::url('civicrm/landingpage/show', 'reset=1'));
 
