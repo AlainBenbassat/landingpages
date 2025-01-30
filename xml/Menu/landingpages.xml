@@ -7,12 +7,6 @@
     <access_arguments>access CiviCRM</access_arguments>
   </item>
   <item>
-    <path>civicrm/landingpage/list</path>
-    <page_callback>CRM_Landingpages_Page_List</page_callback>
-    <title>List</title>
-    <access_arguments>access CiviCRM</access_arguments>
-  </item>
-  <item>
     <path>civicrm/landingpage/show</path>
     <page_callback>CRM_Landingpages_Page_Show</page_callback>
     <title>Show</title>

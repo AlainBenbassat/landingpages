@@ -20,7 +20,7 @@ function landingpages_civicrm_navigationMenu(&$menu) {
   _landingpages_civix_insert_navigation_menu($menu, 'Administer/System Settings', [
     'label' => E::ts('Landing Pages'),
     'name' => 'landingpages',
-    'url' => 'civicrm/landingpage/list',
+    'url' => 'civicrm/search#/display/Landing_Pages/Landing_Pages',
     'permission' => 'administer landing pages',
   ]);
 }
