@@ -1,7 +1,7 @@
 <?php
 use CRM_Landingpages_ExtensionUtil as E;
 
-class CRM_Landingpages_Page_Show extends CRM_Core_Page {
+class CRM_Landingpages_Page_View extends CRM_Core_Page {
 
   public function run() {
     Civi::resources()->addStyleFile('landingpages', 'css/style.css');
