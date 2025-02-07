@@ -2,12 +2,14 @@
 
 Create (landing) pages in your CiviCRM environment.
 
+![animated demo](images/landingpages-demo.gif "Demo")
+
 ## Purpose
 
 Landing pages are just HTML pages that can contain text, images, and hyperlinks.
 You can use them to e.g. provide some handy shortcuts to your users, to document internal processes, to explain some best practices, etc.
 
-See it as a mini wiki inside CiviCRM.
+See it as a mini wiki inside your CiviCRM.
 
 ## Manage Pages
 
@@ -25,6 +27,8 @@ A page has the following fields:
 
 ![screenshot edit mode](images/screenshot-edit-mode.png "Edit mode")
 
+Ony the title is mandatory.
+
 ## Page Layouts
 
 Different page layouts can be obtained by filling in or leaving empty the different fields.
@@ -37,11 +41,13 @@ If you want a full width page, just fill in the header (or the footer).
 
 ![example layout 2](images/layout-full.png "Example Layout 2")
 
-## Links to Other Pages
+Experiment by putting your text in either the header, footer, left column, or the right column to view the different page layouts.
 
-In the rich text editor you can easily create hyperlinks to other pages. These can be links to existing CiviCRM pages and forms, or links to other landing pages.
+## Hyperlinks to Other Pages
 
-The URL structure of landing pages is: /civicrm/landingpage/show?id=ID&reset=1
+In the rich text editor you can create hyperlinks to other pages. These can be links to existing CiviCRM pages and forms, or links to other landing pages.
+
+The URL structure of a landing page is: /civicrm/landingpage/show?id=ID&reset=1
 
 Replace ID with the unique number of the corresponding page. See Administer > System Settings > Landing Pages.
 
