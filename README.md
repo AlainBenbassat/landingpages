@@ -51,7 +51,7 @@ The URL structure of a landing page is: /civicrm/landingpage/show?id=ID&reset=1
 
 Replace ID with the unique number of the corresponding page. See Administer > System Settings > Landing Pages.
 
-A quick way to edit the current landing page is by replacing the word "show" in the URL by "edit".
-e.g. /civicrm/landingpage/edit?id=5&reset=1
+💡 Tip: A quick way to edit the current landing page is by replacing the word "show" in the URL by "edit".
+e.g. /civicrm/landingpage/edit?id=1&reset=1
 
 

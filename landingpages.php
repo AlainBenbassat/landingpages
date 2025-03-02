@@ -21,6 +21,6 @@ function landingpages_civicrm_navigationMenu(&$menu) {
     'label' => E::ts('Landing Pages'),
     'name' => 'landingpages',
     'url' => 'civicrm/search#/display/Landing_Pages/Landing_Pages',
-    'permission' => 'administer landing pages',
+    'permission' => 'administer CiviCRM',
   ]);
 }
