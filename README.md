@@ -11,6 +11,16 @@ You can use them to e.g. provide some handy shortcuts to your users, to document
 
 See it as a mini wiki inside your CiviCRM.
 
+## Permissions
+
+This extension creates two permissions that you should assign to appropriate *roles*.
+
+1. **View landing pages**. Give to user accounts who should be able to see these
+  pages.
+2. **Administer landing pages**. Give to user accounts who should be able to create,
+  edit and delete these pages. Implies *View landing pages* permission.
+
+
 ## Manage Pages
 
 Navigate to: Administer > System Settings > Landing Pages
@@ -53,5 +63,4 @@ Replace ID with the unique number of the corresponding page. See Administer > Sy
 
 💡 Tip: A quick way to edit the current landing page is by replacing the word "show" in the URL by "edit".
 e.g. /civicrm/landingpage/edit?id=1&reset=1
-
 
