@@ -40,6 +40,8 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
     ];
     CRM_Landingpages_BAO_LandingPage::create($params);
 
+    $this->createOrUpdateDashlet($params);
+
     CRM_Utils_System::redirect(CRM_Utils_System::url('civicrm/search#/display/Landing_Pages/Landing_Pages'));
 
     parent::postProcess();
@@ -71,6 +73,7 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
     $this->add('wysiwyg', 'left_text', E::ts('Left column'), []);
     $this->add('wysiwyg', 'right_text', E::ts('Right column'), []);
     $this->add('wysiwyg', 'footer_text', E::ts('Footer'), []);
+    $this->add('checkbox', 'add_to_dashboard', ts('Available for Dashboard?'));
   }
 
   private function addFormButtons() {
@@ -113,6 +116,31 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
       }
     }
     return $this->_id;
+  }
+
+  private function createOrUpdateDashlet($params) {
+    $dashletName = 'landingpage_' . $params['id'];
+CRM_Core_Session::setStatus('test = ' . $params['add_to_dashboard'], 'ee', 'alert');
+    $dashlet = \Civi\Api4\Dashboard::get(FALSE)
+      ->addWhere('name', '=', $dashletName)
+      ->execute()
+      ->first();
+
+    if ($dashlet) {
+      \Civi\Api4\Dashboard::update(FALSE)
+        ->addValue('label', $params['title'])
+        ->addWhere('name', '=', $dashletName)
+        ->execute();
+    }
+    else {
+      \Civi\Api4\Dashboard::create(FALSE)
+        ->addValue('name', $dashletName)
+        ->addValue('label', $params['title'])
+        ->addValue('url', 'civicrm/landingpage/view?id=' . $params['id'])
+        ->addValue('fullscreen_url', 'civicrm/landingpage/view?id=' . $params['id'])
+        ->addValue('is_active', TRUE)
+        ->execute();
+    }
   }
 
   private function getRenderableElementNames(): array {
