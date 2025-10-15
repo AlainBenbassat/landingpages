@@ -120,7 +120,6 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
 
   private function createOrUpdateDashlet($params) {
     $dashletName = 'landingpage_' . $params['id'];
-CRM_Core_Session::setStatus('test = ' . $params['add_to_dashboard'], 'ee', 'alert');
     $dashlet = \Civi\Api4\Dashboard::get(FALSE)
       ->addWhere('name', '=', $dashletName)
       ->execute()
