@@ -66,7 +66,7 @@ e.g. /civicrm/landingpage/edit?id=1&reset=1
 
 ## Landing Page as Dashlet
 
-A landing page can be added to your CiviCRM Dashboard. Edit the page and check the corresponding checkbox at the bottom of the page.
+A landing page can be added to your CiviCRM Dashboard. Edit the landing page and check the corresponding checkbox at the bottom of the page. Then go to CiviCRM Home, click on "Available Dashlets" and drag and drop the landing page into the right or left column of your dashboard.
 
 ## Navigation Menu
 
