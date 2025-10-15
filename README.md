@@ -61,8 +61,16 @@ The URL structure of a landing page is: /civicrm/landingpage/view?id=ID&reset=1
 
 Replace ID with the unique number of the corresponding page. See Administer > System Settings > Landing Pages.
 
-💡 Tip: A quick way to edit the current landing page is by replacing the word "show" in the URL by "edit".
+💡 Tip: A quick way to edit the current landing page is by replacing the word "view" in the URL by "edit".
 e.g. /civicrm/landingpage/edit?id=1&reset=1
+
+## Landing Page as Dashlet
+
+A landing page can be added to your CiviCRM Dashboard. Edit the page and check the corresponding checkbox at the bottom of the page.
+
+## Navigation Menu
+
+Use the standard CiviCRM options to customize the navigation menu (Administer > Customize Data and Screens > Navigation Menu) to create your own documentation structure with links to landing pages.
 
 ## Release notes
 

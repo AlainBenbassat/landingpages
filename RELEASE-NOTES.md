@@ -1,6 +1,6 @@
 # Landing Pages - Release Notes
 
-## v1.1.0
+## v1.1.0 - 2025-10-15
 
 * adds checkbox: "Available for Dashboard?"
 * uses Entity Framework v2 instead of v1
