@@ -22,7 +22,7 @@ class CRM_Landingpages_Upgrader extends CRM_Extension_Upgrader_Base {
    }
 
    public function upgrade_1001(): bool {
-     E::schema()->createEntityTable('upgrade/MyEntity.entityType.php');
+     E::schema()->createEntityTable('upgrade/LandingPage.entityType.php');
      return TRUE;
    }
 
