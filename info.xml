@@ -18,7 +18,7 @@
   <version>1.1.0</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>6.4.1</ver>
+    <ver>6.4</ver>
   </compatibility>
   <comments/>
   <classloader>
