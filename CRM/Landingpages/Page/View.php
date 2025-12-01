@@ -6,7 +6,10 @@ class CRM_Landingpages_Page_View extends CRM_Core_Page {
   public function run() {
     Civi::resources()->addStyleFile('landingpages', 'css/style.css');
 
-    $id = CRM_Utils_Request::retrieve('id', 'Positive', NULL, TRUE);
+    $id = CRM_Utils_Request::retrieve('id', 'Positive', NULL, FALSE);
+    if (empty($id)) {
+      return;
+    }
     $defaults = [];
 
     $landingPage = CRM_Landingpages_BAO_LandingPage::retrieve(['id' => $id], $defaults);

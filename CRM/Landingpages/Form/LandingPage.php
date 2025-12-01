@@ -37,6 +37,7 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
       'footer_text' => $values['footer_text'],
       'left_text' => $values['left_text'],
       'right_text' => $values['right_text'],
+      'add_to_dashboard' => empty($values['add_to_dashboard']) ? FALSE: TRUE,
     ];
     CRM_Landingpages_BAO_LandingPage::create($params);
 
@@ -126,10 +127,18 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
       ->first();
 
     if ($dashlet) {
-      \Civi\Api4\Dashboard::update(FALSE)
-        ->addValue('label', $params['title'])
-        ->addWhere('name', '=', $dashletName)
-        ->execute();
+      // dashboard already exists, update or delete
+      if ($params['add_to_dashboard']) {
+        \Civi\Api4\Dashboard::update(FALSE)
+          ->addValue('label', $params['title'])
+          ->addWhere('name', '=', $dashletName)
+          ->execute();
+      }
+      else {
+        \Civi\Api4\Dashboard::delete(FALSE)
+          ->addWhere('name', '=', $dashletName)
+          ->execute();
+      }
     }
     else {
       \Civi\Api4\Dashboard::create(FALSE)
