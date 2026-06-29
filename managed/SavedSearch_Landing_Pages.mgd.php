@@ -89,7 +89,7 @@ return [
               'size' => 'btn-xs',
               'links' => [
                 [
-                  'path' => 'civicrm/landingpage?action=update&reset=1&id=[id]&reset=1',
+                  'path' => 'civicrm/landingpage/edit?action=update&reset=1&id=[id]&reset=1',
                   'icon' => 'fa-external-link',
                   'text' => E::ts('Edit'),
                   'style' => 'default',
