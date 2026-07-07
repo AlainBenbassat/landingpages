@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <menu>
   <item>
-    <path>civicrm/landingpage</path>
+    <path>civicrm/landingpage/edit</path>
     <page_callback>CRM_Landingpages_Form_LandingPage</page_callback>
     <title>Edit</title>
     <access_arguments>access CiviCRM</access_arguments>
