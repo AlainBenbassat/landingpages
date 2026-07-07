@@ -69,7 +69,7 @@ class CRM_Landingpages_Form_LandingPage extends CRM_Core_Form {
     }
 
     $this->add('hidden', 'id', $this->getLandingPageId());
-    $this->add('text', 'title', E::ts('Title'), [], TRUE);
+    $this->add('text', 'title', E::ts('Title'), ['class' => 'huge'], TRUE);
     $this->add('wysiwyg', 'header_text', E::ts('Header'), []);
     $this->add('wysiwyg', 'left_text', E::ts('Left column'), []);
     $this->add('wysiwyg', 'right_text', E::ts('Right column'), []);
